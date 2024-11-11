@@ -1,15 +1,24 @@
-/* Удаление отступов и полей у body */
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* Настройка основного контейнера */
-#page-container {
+/* Удаление отступов и полей у body и html */
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+}
+
+/* Настройка основного контейнера с Flexbox */
+#page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    transform: scale(1.2); /* Увеличение масштаба */
+    transform-origin: top left;
 }
 
 /* Установка глобального box-sizing */
@@ -19,38 +28,69 @@ body {
 
 /* Увеличение размеров шрифтов */
 .fs0 {
-    font-size: 130px; /* Было 99.148400px */
+    font-size: 150px; /* Было 99.148400px */
 }
 
 .fs1 {
-    font-size: 60px; /* Было 47.820800px */
+    font-size: 70px; /* Было 47.820800px */
 }
 
 .fs2 {
-    font-size: 80px; /* Было 68.861600px */
+    font-size: 90px; /* Было 68.861600px */
 }
 
-/* Изменение трансформаций масштабирования */
+/* Удаление или увеличение трансформаций масштабирования */
+.m0, .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8, .m9, .ma, .mb {
+    transform: matrix(1, 0, 0, 1, 0, 0) !important; /* Убираем масштабирование */
+    -ms-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+    -webkit-transform: matrix(1, 0, 0, 1, 0, 0) !important;
+}
+
+/* Или увеличиваем масштаб */
 .m0 {
-    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
-    -ms-transform: matrix(0.5, 0, 0, 0.5, 0, 0);
-    -webkit-transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    transform: matrix(1.5, 0, 0, 1.5, 0, 0) !important;
+    -ms-transform: matrix(1.5, 0, 0, 1.5, 0, 0) !important;
+    -webkit-transform: matrix(1.5, 0, 0, 1.5, 0, 0) !important;
 }
 
 .m1 {
-    transform: matrix(2, 0, 0, 2, 0, 0);
-    -ms-transform: matrix(2, 0, 0, 2, 0, 0);
-    -webkit-transform: matrix(2, 0, 0, 2, 0, 0);
+    transform: matrix(2, 0, 0, 2, 0, 0) !important;
+    -ms-transform: matrix(2, 0, 0, 2, 0, 0) !important;
+    -webkit-transform: matrix(2, 0, 0, 2, 0, 0) !important;
 }
 
-/* Удаление отступов и полей у других элементов */
-.pf, .pc, .t, .d {
+/* Убираем фиксированные размеры и отступы */
+._0, ._1, ._2, ._3, ._4, ._5, ._6, ._7, ._8, ._9, ._a, ._b, ._c, ._d, ._e, ._f, ._10, ._11 {
+    width: auto !important;
+    margin-left: 0 !important;
+}
+
+.x0, .xa, .xc, .xb, .xd, .x1, .x2, .x3, .x4, .x5, .x6, .x7, .x8, .x9 {
+    left: 0 !important;
+}
+
+.y0, .ya, .yb, .yc, .yd, .ye, .yf, .y10, .y11, .y12, .y13, .y14, .y15, .y16, .y17, .y18, .y19, .y1a, .y1b, .y1c, .y1d, .y1e, .y1f, .y20, .y21, .y22, .y23 {
+    bottom: 0 !important;
+}
+
+/* Увеличение размеров изображений */
+.bi {
+    width: 100%;
+    height: auto;
+}
+
+/* Скрытие сайдбара и индикатора загрузки, если не нужны */
+#sidebar {
+    display: none;
+}
+
+.loading-indicator {
+    display: none;
+}
+
+/* Дополнительные стили для текстовых элементов */
+.t {
     margin: 0;
     padding: 0;
-}
-
-/* Дополнительные изменения для уменьшения белого пространства */
-.t {
-    /* Пример: Увеличение высоты линии */
-    line-height: 1.2;
+    line-height: 1.2; /* Увеличение высоты строки */
 }
