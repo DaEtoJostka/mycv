@@ -1,209 +1,63 @@
-/* Основные стили шрифтов */
-@font-face {
-    font-family: ff0;
-    src: url('data:application/font-woff;base64,...') format("woff");
-  }
-  .ff0 {
-    font-family: ff0;
-    line-height: 0.333000;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
-  }
-  
-  @font-face {
-    font-family: ff1;
-    src: url('data:application/font-woff;base64,...') format("woff");
-  }
-  .ff1 {
-    font-family: ff1;
-    line-height: 0.727000;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
+/* Существующие стили шрифтов и классов */
+
+/* ... (ваши текущие @font-face и классы) ... */
+
+/* Новые стили для центрирования и увеличения текста */
+
+/* 1. Центрирование всех элементов с классом .t */
+#page-container .t {
+    position: absolute !important;       /* Обеспечиваем абсолютное позиционирование */
+    left: 50% !important;                /* Сдвигаем элемент на 50% от левого края контейнера */
+    transform: translateX(-50%) !important; /* Смещаем элемент на половину его ширины для центрирования */
+    text-align: center !important;       /* Центрируем текст внутри элемента */
+    font-size: 1.5em !important;         /* Увеличиваем размер шрифта на 50% относительно базового */
+    width: auto !important;              /* Убираем фиксированную ширину, если она установлена */
   }
   
-  @font-face {
-    font-family: ff2;
-    src: url('data:application/font-woff;base64,...') format("woff");
-  }
-  .ff2 {
-    font-family: ff2;
-    line-height: 0.894000;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
-  }
-  
-  @font-face {
-    font-family: ff3;
-    src: url('data:application/font-woff;base64,...') format("woff");
-  }
-  .ff3 {
-    font-family: ff3;
-    line-height: 0.383000;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
-  }
-  
-  @font-face {
-    font-family: ff4;
-    src: url('data:application/font-woff;base64,...') format("woff");
-  }
-  .ff4 {
-    font-family: ff4;
-    line-height: 0.727000;
-    font-style: normal;
-    font-weight: normal;
-    visibility: visible;
-  }
-  
-  /* Добавьте остальные @font-face по аналогии */
-  
-  /* Основные классы для трансформации и позиционирования */
-  .m0 { transform: matrix(0.375000,0.000000,0.000000,0.375000,0,0); -ms-transform: matrix(0.375000,0.000000,0.000000,0.375000,0,0); -webkit-transform: matrix(0.375000,0.000000,0.000000,0.375000,0,0); }
-  .m1 { transform: matrix(1.500000,0.000000,0.000000,1.500000,0,0); -ms-transform: matrix(1.500000,0.000000,0.000000,1.500000,0,0); -webkit-transform: matrix(1.500000,0.000000,0.000000,1.500000,0,0); }
-  .v0 { vertical-align: 0.000000px; }
-  .ls0 { letter-spacing: 0.000000px; }
-  .sc_ { text-shadow: none; }
-  .sc0 { text-shadow: -0.015em 0 transparent, 0 0.015em transparent, 0.015em 0 transparent, 0 -0.015em transparent; }
-  @media screen and (-webkit-min-device-pixel-ratio:0){
-    .sc_ { -webkit-text-stroke: 0px transparent; }
-    .sc0 { -webkit-text-stroke: 0.015em transparent; text-shadow: none; }
-  }
-  .ws0 { word-spacing: 0.000000px; }
-  
-  /* Классы для маргинов и ширины */
-  ._0 { margin-left: -5.155717px; }
-  ._b { margin-left: -3.921306px; }
-  ._2 { margin-left: -2.577858px; }
-  ._3 { margin-left: -1.343447px; }
-  ._7 { width: 1.357636px; }
-  ._f { width: 14.571155px; }
-  ._5 { width: 15.589581px; }
-  ._6 { width: 17.167667px; }
-  ._10 { width: 18.558935px; }
-  ._d { width: 20.118368px; }
-  ._e { width: 21.432661px; }
-  ._c { width: 23.411718px; }
-  ._8 { width: 25.445130px; }
-  ._9 { width: 26.610557px; }
-  ._1 { width: 29.942817px; }
-  ._4 { width: 31.186716px; }
-  ._11 { width: 719.751571px; }
-  ._a { width: 832.837649px; }
-  
-  /* Классы для цвета */
-  .fc1 { color: rgb(0,51,153); }
-  .fc0 { color: rgb(0,0,0); }
-  
-  /* Классы для размера шрифта */
-  .fs1 { font-size: 47.820800px; }
-  .fs2 { font-size: 68.861600px; }
-  .fs0 { font-size: 99.148400px; }
-  
-  /* Классы для позиционирования по нижнему краю */
-  .y0 { bottom: 0.000000px; }
-  .y23 { bottom: 210.309000px; }
-  .y22 { bottom: 231.978000px; }
-  .y21 { bottom: 253.647000px; }
-  .y20 { bottom: 291.504000px; }
-  .y1f { bottom: 359.125500px; }
-  .y1e { bottom: 380.794500px; }
-  .y1d { bottom: 406.947000px; }
-  .y1c { bottom: 433.098000px; }
-  .y1b { bottom: 459.250500px; }
-  .y1a { bottom: 485.403000px; }
-  .y19 { bottom: 525.129000px; }
-  .y18 { bottom: 602.463000px; }
-  .y17 { bottom: 628.615500px; }
-  .y16 { bottom: 654.768000px; }
-  .y15 { bottom: 680.919000px; }
-  .y14 { bottom: 702.588000px; }
-  .y13 { bottom: 728.740500px; }
-  .y12 { bottom: 754.891500px; }
-  .y11 { bottom: 776.560500px; }
-  .y10 { bottom: 802.713000px; }
-  .yf { bottom: 828.864000px; }
-  .ye { bottom: 850.533000px; }
-  .yd { bottom: 872.202000px; }
-  .yc { bottom: 898.354500px; }
-  .yb { bottom: 920.022000px; }
-  .ya { bottom: 959.748000px; }
-  .y9 { bottom: 1000.321500px; }
-  .y8 { bottom: 1048.141500px; }
-  .y7 { bottom: 1069.810500px; }
-  .y6 { bottom: 1107.669000px; }
-  .y4 { bottom: 1152.837000px; }
-  .y5 { bottom: 1152.858000px; }
-  .y2 { bottom: 1152.948000px; }
-  .y3 { bottom: 1153.621500px; }
-  .y1 { bottom: 1186.498500px; }
-  
-  /* Классы для высоты */
-  .h4 { height: 35.865600px; }
-  .h5 { height: 41.078067px; }
-  .h3 { height: 41.861912px; }
-  .h6 { height: 48.547428px; }
-  .h2 { height: 68.808990px; }
-  .h0 { height: 1262.835000px; }
-  .h1 { height: 1263.000000px; }
-  
-  /* Классы для ширины */
-  .w0 { width: 892.914000px; }
-  .w1 { width: 893.250000px; }
-  
-  /* Классы для позиционирования слева */
-  .x0 { left: 0.000000px; }
-  .xa { left: 44.649000px; }
-  .xc { left: 60.900000px; }
-  .xb { left: 62.208000px; }
-  .xd { left: 79.767000px; }
-  .x2 { left: 83.814000px; }
-  .x3 { left: 107.599500px; }
-  .x4 { left: 340.848000px; }
-  .x1 { left: 358.515000px; }
-  .x5 { left: 364.633500px; }
-  .x6 { left: 540.327000px; }
-  .x7 { left: 563.538000px; }
-  .x8 { left: 687.517500px; }
-  .x9 { left: 710.730000px; }
-  
-  /* Центрирование текста и увеличение размера */
-  body {
-    text-align: center !important;
-  }
-  
-  #page-container {
-    font-size: 28px !important; /* Увеличение базового размера шрифта */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .t {
-    left: 50% !important; /* Центрирование элемента по горизонтали */
-    transform: translateX(-50%) !important; /* Смещение элемента на половину его ширины */
-    text-align: center !important; /* Центрирование текста внутри элемента */
-    font-size: 1.2em !important; /* Увеличение размера текста на 20% */
-  }
-  
-  /* Увеличение размера шрифта для специфических классов */
+  /* 2. Увеличение размера шрифтов для специфических классов */
   .fs0 {
     font-size: 120px !important; /* Было 99.148400px */
   }
   
   .fs1 {
-    font-size: 60px !important; /* Было 47.820800px */
+    font-size: 60px !important;  /* Было 47.820800px */
   }
   
   .fs2 {
-    font-size: 80px !important; /* Было 68.861600px */
+    font-size: 80px !important;  /* Было 68.861600px */
   }
   
-  /* Остальные стили остаются без изменений */
-
+  /* 3. Дополнительные улучшения */
   
-  /* Добавьте любые другие необходимые изменения ниже */
+  /* Центрирование контейнера страницы */
+  #page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Горизонтальное центрирование содержимого */
+    justify-content: flex-start; /* Вертикальное начало содержимого */
+    font-size: 24px !important; /* Увеличение базового размера шрифта */
+  }
+  
+  /* Обеспечение, что все текстовые элементы имеют адекватную ширину */
+  #page-container .t {
+    max-width: 90%; /* Ограничиваем ширину до 90% от контейнера для лучшего центрирования */
+  }
+  
+  /* Опционально: Увеличение межстрочного расстояния для читаемости */
+  #page-container .t {
+    line-height: 1.4 !important;
+  }
+  
+  /* Опционально: Удаление фиксированных `left` и `bottom`, если это возможно */
+  /* Если вы можете изменить HTML, удалите классы, задающие фиксированные позиции, например, .x1, .y1 и т.д. */
+  
+  /* Пример переопределения нескольких классов, если необходимо */
+  .t.m0.x1.h2.y1.ff1.fs0.fc0.sc0.ls0.ws0 {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    text-align: center !important;
+    font-size: 1.5em !important;
+  }
+  
+  /* Повторите для других комбинаций классов, если это необходимо */
   
