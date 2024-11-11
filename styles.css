@@ -1,134 +1,56 @@
-/* Общие стили */
+/* Удаление отступов и полей у body */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
 }
 
-.container {
-    width: 90%;
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-/* Заголовок */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-header h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    font-size: 0.9em;
-}
-
-.contact-info a {
-    color: #002e6c;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.contact-info a i {
-    margin-right: 5px;
-}
-
-.contact-info span {
-    color: #999;
-}
-
-/* Секции */
-section {
-    margin-bottom: 30px;
-}
-
-section h2 {
-    font-size: 1.8em;
-    text-transform: uppercase;
-    border-bottom: 2px solid #002e6c;
-    padding-bottom: 5px;
-    margin-bottom: 15px;
-}
-
-/* Опыт работы */
-.job {
-    margin-bottom: 20px;
-}
-
-.job-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.job-header h3 {
-    font-size: 1.2em;
+/* Настройка основного контейнера */
+#page-container {
     margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
 }
 
-.job-header .date {
-    font-size: 0.9em;
-    color: #555;
+/* Установка глобального box-sizing */
+* {
+    box-sizing: border-box;
 }
 
-.job ul {
-    list-style-type: disc;
-    padding-left: 20px;
+/* Увеличение размеров шрифтов */
+.fs0 {
+    font-size: 130px; /* Было 99.148400px */
 }
 
-.job ul ul {
-    list-style-type: circle;
-    padding-left: 20px;
+.fs1 {
+    font-size: 60px; /* Было 47.820800px */
 }
 
-.job ul li {
-    margin-bottom: 8px;
+.fs2 {
+    font-size: 80px; /* Было 68.861600px */
 }
 
-/* Навыки */
-section p {
-    font-size: 1em;
-    line-height: 1.8;
+/* Изменение трансформаций масштабирования */
+.m0 {
+    transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    -ms-transform: matrix(0.5, 0, 0, 0.5, 0, 0);
+    -webkit-transform: matrix(0.5, 0, 0, 0.5, 0, 0);
 }
 
-/* Ссылки */
-a {
-    color: #0066cc;
-    text-decoration: none;
+.m1 {
+    transform: matrix(2, 0, 0, 2, 0, 0);
+    -ms-transform: matrix(2, 0, 0, 2, 0, 0);
+    -webkit-transform: matrix(2, 0, 0, 2, 0, 0);
 }
 
-a:hover {
-    text-decoration: underline;
+/* Удаление отступов и полей у других элементов */
+.pf, .pc, .t, .d {
+    margin: 0;
+    padding: 0;
 }
 
-/* Адаптивность */
-@media (max-width: 600px) {
-    .contact-info {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .job-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .job-header .date {
-        margin-top: 5px;
-    }
+/* Дополнительные изменения для уменьшения белого пространства */
+.t {
+    /* Пример: Увеличение высоты линии */
+    line-height: 1.2;
 }
