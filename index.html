@@ -2,28 +2,59 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Резюме Ивана Карлова</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Подключение иконки GitHub -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Резюме Иван Карлов</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <img src="your-photo.jpg" alt="Фотография Ивана" class="profile-pic">
-            <a href="https://github.com/<ваш_логин>" target="_blank" class="github-link">
-                <i class="fab fa-github fa-2x"></i>
+    <div class="language-switch">
+        <button onclick="switchLanguage('ru')">RU</button>
+        <button onclick="switchLanguage('en')">EN</button>
+    </div>
+
+    <header>
+        <div class="profile">
+            <img src="images/photo.jpg" alt="Ivan Karlov" class="profile-photo">
+            <a href="https://github.com/DaEtoJostka" target="_blank">
+                <img src="images/github.png" alt="GitHub" class="github-logo">
             </a>
         </div>
-        <div class="content">
-            <h1>Иван Карлов</h1>
-            <p>Email: karlovivan6799@gmail.com | Телефон: +7 (996) 205-05-03 | Twitter: @IvanK2003 | Telegram: DaEtoJostka</p>
-            <h2>Резюме</h2>
-            <p>Data Scientist с более чем 2,5-летним опытом в области машинного обучения и анализа данных. Ищу интересную позицию для применения моего опыта в области Data Science с целью улучшения бизнес-результатов.</p>
-            <!-- Добавьте остальные разделы резюме здесь -->
+        <div class="resume-content">
+            <!-- Русская версия -->
+            <div id="content-ru" class="content">
+                <h1>Иван Карлов</h1>
+                <p>karlovivan6799@gmail.com | +7 (996) 205-05-03 | @IvanK2003 | DaEtoJostka</p>
+                <h2>Резюме</h2>
+                <p>Data Scientist с опытом работы более 2,5 лет в области машинного обучения и анализа данных. Ищу
+                интересную позицию для применения моего опыта в области data science для улучшения бизнес-результатов.</p>
+                <!-- Добавьте остальное резюме на русском -->
+            </div>
+            <!-- Английская версия -->
+            <div id="content-en" class="content" style="display: none;">
+                <h1>Ivan Karlov</h1>
+                <p>karlovivan6799@gmail.com | +7 (996) 205-05-03 | @IvanK2003 | DaEtoJostka</p>
+                <h2>Summary</h2>
+                <p>Data Scientist with over 2.5 years of experience in machine learning and data analysis. Seeking a
+                challenging position to apply my expertise in data science to help improve business outcomes.</p>
+                <!-- Добавьте остальное резюме на английском -->
+            </div>
         </div>
-    </div>
+    </header>
+
+    <!-- Добавьте дополнительные секции по мере необходимости -->
+
+    <script>
+        function switchLanguage(lang) {
+            const ru = document.getElementById('content-ru');
+            const en = document.getElementById('content-en');
+            if (lang === 'ru') {
+                ru.style.display = 'block';
+                en.style.display = 'none';
+            } else {
+                ru.style.display = 'none';
+                en.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

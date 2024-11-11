@@ -1,51 +1,126 @@
+/* Общие стили */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-}
-
-.container {
-    display: flex;
-    width: 100%;
-}
-
-.sidebar {
-    width: 250px;
     background-color: #f4f4f4;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
 }
 
-.profile-pic {
+header {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.profile {
+    flex: 0 0 200px;
+    text-align: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.profile-photo {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    transition: transform 0.3s;
 }
 
-.github-link {
-    color: #333;
-    text-decoration: none;
-    margin-top: auto;
+.profile-photo:hover {
+    transform: scale(1.05);
 }
 
-.github-link:hover {
-    color: #4078c0;
+.github-logo {
+    width: 40px;
+    margin-top: 10px;
+    transition: opacity 0.3s;
+}
+
+.github-logo:hover {
+    opacity: 0.7;
+}
+
+.resume-content {
+    margin-left: 240px;
+    padding: 20px;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .content {
-    flex: 1;
-    padding: 40px;
+    animation: scrollEffect 1s ease-in-out;
 }
 
 h1 {
-    margin-top: 0;
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 h2 {
-    margin-top: 40px;
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Эффект при прокрутке */
+@keyframes scrollEffect {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Переключатель языка */
+.language-switch {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.language-switch button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.language-switch button:hover {
+    background-color: #0056b3;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile {
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .resume-content {
+        margin-left: 0;
+    }
 }
