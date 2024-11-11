@@ -5,56 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Резюме Иван Карлов</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Подключение Google Fonts для современного шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="language-switch">
-        <button onclick="switchLanguage('ru')">RU</button>
-        <button onclick="switchLanguage('en')">EN</button>
-    </div>
-
-    <header>
-        <div class="profile">
-            <img src="images/photo.jpg" alt="Ivan Karlov" class="profile-photo">
-            <a href="https://github.com/DaEtoJostka" target="_blank">
-                <img src="images/github.png" alt="GitHub" class="github-logo">
-            </a>
-        </div>
-        <div class="resume-content">
-            <!-- Русская версия -->
-            <div id="content-ru" class="content">
-                <h1>Иван Карлов</h1>
-                <p>karlovivan6799@gmail.com | +7 (996) 205-05-03 | @IvanK2003 | DaEtoJostka</p>
-                <h2>Резюме</h2>
-                <p>Data Scientist с опытом работы более 2,5 лет в области машинного обучения и анализа данных. Ищу
-                интересную позицию для применения моего опыта в области data science для улучшения бизнес-результатов.</p>
-                <!-- Добавьте остальное резюме на русском -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <h1 class="name">Иван Карлов</h1>
+                <div class="language-switch">
+                    <button class="lang-btn active" onclick="switchLanguage('ru')">RU</button>
+                    <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
+                </div>
             </div>
-            <!-- Английская версия -->
-            <div id="content-en" class="content" style="display: none;">
-                <h1>Ivan Karlov</h1>
-                <p>karlovivan6799@gmail.com | +7 (996) 205-05-03 | @IvanK2003 | DaEtoJostka</p>
-                <h2>Summary</h2>
-                <p>Data Scientist with over 2.5 years of experience in machine learning and data analysis. Seeking a
-                challenging position to apply my expertise in data science to help improve business outcomes.</p>
-                <!-- Добавьте остальное резюме на английском -->
+            <div class="contact-info">
+                <p>Email: <a href="mailto:karlovivan6799@gmail.com">karlovivan6799@gmail.com</a></p>
+                <p>Телефон: <a href="tel:+79962050503">+7 (996) 205-05-03</a></p>
+                <p>Telegram: <a href="https://t.me/IvanK2003" target="_blank">@IvanK2003</a></p>
+                <p>GitHub: <a href="https://github.com/DaEtoJostka" target="_blank">
+                    <img src="images/github.png" alt="GitHub" class="github-logo">
+                </a></p>
             </div>
         </div>
     </header>
 
-    <!-- Добавьте дополнительные секции по мере необходимости -->
+    <main class="main-content">
+        <section id="summary-ru" class="section content active">
+            <h2>Резюме</h2>
+            <p>Data Scientist с опытом работы более 2,5 лет в области машинного обучения и анализа данных. Ищу интересную позицию для применения моего опыта в области data science для улучшения бизнес-результатов.</p>
+        </section>
+
+        <section id="summary-en" class="section content">
+            <h2>Summary</h2>
+            <p>Data Scientist with over 2.5 years of experience in machine learning and data analysis. Seeking a challenging position to apply my expertise in data science to help improve business outcomes.</p>
+        </section>
+
+        <section id="experience-ru" class="section content">
+            <h2>Опыт работы</h2>
+            <h3>Data Scientist в IndorSoft</h3>
+            <span>Февраль 2022 – Сентябрь 2024</span>
+            <ul>
+                <li>Разработал ансамбль CatBoost для перенаправления запросов поддержки в соответствующие разделы FAQ, снизив нагрузку на команду на 15%.</li>
+                <li>Создал дополнение для IndorTrafficPlan для распознавания и передачи дорожных знаков с видео на план дороги (демо-ссылка):
+                    <ul>
+                        <li>Обучил YOLO для обнаружения дорожных знаков (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
+                        <li>Разработал классификаторы на основе EfficientNet V2 для групп знаков (точность ≥0.98).</li>
+                        <li>Создал гибридную модель с MobileNet V3 для табличных и визуальных данных, сократив время вывода в 3 раза без потери точности.</li>
+                        <li>Реализовал модель LSTM для улучшения отслеживания, устранив переключения ID.</li>
+                        <li>Сгенерировал синтетические данные для увеличения набора данных в 4 раза, улучшив обнаружение на 8% (Recall), точность на 12% (IoU) и классификацию на 10% (F1).</li>
+                        <li>Помог в разработке метода триангуляции для точного измерения расстояния до знаков (±0.15 м).</li>
+                        <li>Разработал скрипты для взаимодействия классификатора и детектора.</li>
+                        <li>Исправил аннотации данных с использованием CVAT и управлял наборами данных с помощью FiftyOne.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Data Scientist Intern в IndorSoft</h3>
+            <span>Январь 2022 – Февраль 2022</span>
+            <ul>
+                <li>Написал эффективные SQL-запросы для извлечения и анализа данных.</li>
+                <li>Рефакторил существующий код.</li>
+                <li>Поиск, анализ и подготовка наборов данных.</li>
+                <li>Презентовал результаты с использованием Gradio.</li>
+                <li>Разработал кластеризатор изображений с использованием ViT и K-means, достиг Silhouette Score = 0.91 после PCA.</li>
+                <li>Улучшил классификатор YOLO на 12% (F1) с новым разделением данных.</li>
+            </ul>
+        </section>
+
+        <section id="experience-en" class="section content">
+            <h2>Work Experience</h2>
+            <h3>Data Scientist at IndorSoft</h3>
+            <span>February 2022 – September 2024</span>
+            <ul>
+                <li>Developed a CatBoost ensemble to redirect support requests to appropriate FAQ sections, reducing team workload by 15%.</li>
+                <li>Created an add-on for IndorTrafficPlan to recognize and transfer road signs from video to road plan (demo link):
+                    <ul>
+                        <li>Trained YOLO for detecting road signs (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
+                        <li>Developed classifiers based on EfficientNet V2 for sign groups (accuracy ≥0.98).</li>
+                        <li>Created a hybrid model with MobileNet V3 for tabular and visual data, reducing inference time by 3x without accuracy loss.</li>
+                        <li>Implemented an LSTM model to improve tracking, eliminating ID Switches.</li>
+                        <li>Generated synthetic data to expand dataset by 4x, improving detection by 8% (Recall), precision by 12% (IoU), and classification by 10% (F1).</li>
+                        <li>Assisted in developing a triangulation method for accurate distance measurement to signs (±0.15 m).</li>
+                        <li>Developed scripts for classifier and detector interaction.</li>
+                        <li>Corrected data annotation using CVAT and managed datasets with FiftyOne.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>Data Scientist Intern at IndorSoft</h3>
+            <span>January 2022 – February 2022</span>
+            <ul>
+                <li>Wrote efficient SQL queries for data extraction and analysis.</li>
+                <li>Refactored existing code.</li>
+                <li>Searched, analyzed, and prepared datasets.</li>
+                <li>Presented results using Gradio.</li>
+                <li>Developed an image clusterizer using ViT and K-means, achieving Silhouette Score = 0.91 after PCA.</li>
+                <li>Improved YOLO classifier by 12% (F1) with new data splitting.</li>
+            </ul>
+        </section>
+
+        <section id="skills-ru" class="section content active">
+            <h2>Навыки</h2>
+            <ul class="skills-list">
+                <li>Git</li>
+                <li>Python</li>
+                <li>Plotly</li>
+                <li>PyTorch</li>
+                <li>NumPy</li>
+                <li>Docker</li>
+                <li>Linux</li>
+                <li>PostgreSQL</li>
+                <li>CatBoost</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>OOP</li>
+                <li>SQL</li>
+                <li>Machine Learning</li>
+                <li>Pandas</li>
+                <li>Data Science</li>
+                <li>Big Data</li>
+                <li>Scikit-learn</li>
+                <li>Computer Vision</li>
+                <li>Data Mining</li>
+                <li>NLP</li>
+            </ul>
+        </section>
+
+        <section id="skills-en" class="section content">
+            <h2>Skills</h2>
+            <ul class="skills-list">
+                <li>Git</li>
+                <li>Python</li>
+                <li>Plotly</li>
+                <li>PyTorch</li>
+                <li>NumPy</li>
+                <li>Docker</li>
+                <li>Linux</li>
+                <li>PostgreSQL</li>
+                <li>CatBoost</li>
+                <li>TensorFlow</li>
+                <li>Keras</li>
+                <li>OOP</li>
+                <li>SQL</li>
+                <li>Machine Learning</li>
+                <li>Pandas</li>
+                <li>Data Science</li>
+                <li>Big Data</li>
+                <li>Scikit-learn</li>
+                <li>Computer Vision</li>
+                <li>Data Mining</li>
+                <li>NLP</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Иван Карлов. Все права защищены.</p>
+    </footer>
 
     <script>
         function switchLanguage(lang) {
-            const ru = document.getElementById('content-ru');
-            const en = document.getElementById('content-en');
-            if (lang === 'ru') {
-                ru.style.display = 'block';
-                en.style.display = 'none';
-            } else {
-                ru.style.display = 'none';
-                en.style.display = 'block';
-            }
+            const sections = document.querySelectorAll('.content');
+            sections.forEach(section => {
+                if (section.id.endsWith(`-${lang}`)) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+
+            // Обновление активного состояния кнопок
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`.lang-btn[onclick="switchLanguage('${lang}')"]`).classList.add('active');
         }
+
+        // Плавные эффекты при прокрутке
+        document.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    section.classList.add('visible');
+                }
+            });
+        });
     </script>
 </body>
 </html>
