@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
     <!-- Подключение Google Fonts для современного шрифта -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Подключение FontAwesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pVnZAg6h3a8uSXQ4FjdEdf8ax/67fXkzL0Vyt58PqfyO0YwJV0FfIx5T3xS89FyVSlPcSnZHLN1fGhM9o8uLEQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 </head>
 <body>
     <header class="header">
@@ -19,17 +27,16 @@
                 </div>
             </div>
             <div class="contact-info">
-                <p>Email: <a href="mailto:karlovivan6799@gmail.com">karlovivan6799@gmail.com</a></p>
-                <p>Телефон: <a href="tel:+79962050503">+7 (996) 205-05-03</a></p>
-                <p>Telegram: <a href="https://t.me/IvanK2003" target="_blank">@IvanK2003</a></p>
-                <p>GitHub: <a href="https://github.com/DaEtoJostka" target="_blank">
-                    <img src="images/github.png" alt="GitHub" class="github-logo">
-                </a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:karlovivan6799@gmail.com">karlovivan6799@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+79962050503">+7 (996) 205-05-03</a></p>
+                <p><i class="fab fa-telegram"></i> <a href="https://t.me/IvanK2003" target="_blank">@IvanK2003</a></p>
+                <p><i class="fab fa-github"></i> <a href="https://github.com/DaEtoJostka" target="_blank">DaEtoJostka</a></p>
             </div>
         </div>
     </header>
 
     <main class="main-content">
+        <!-- Summary Section -->
         <section id="summary-ru" class="section content active">
             <h2>Резюме</h2>
             <p>Data Scientist с опытом работы более 2,5 лет в области машинного обучения и анализа данных. Ищу интересную позицию для применения моего опыта в области data science для улучшения бизнес-результатов.</p>
@@ -40,70 +47,80 @@
             <p>Data Scientist with over 2.5 years of experience in machine learning and data analysis. Seeking a challenging position to apply my expertise in data science to help improve business outcomes.</p>
         </section>
 
+        <!-- Work Experience Section -->
         <section id="experience-ru" class="section content">
             <h2>Опыт работы</h2>
-            <h3>Data Scientist в IndorSoft</h3>
-            <span>Февраль 2022 – Сентябрь 2024</span>
-            <ul>
-                <li>Разработал ансамбль CatBoost для перенаправления запросов поддержки в соответствующие разделы FAQ, снизив нагрузку на команду на 15%.</li>
-                <li>Создал дополнение для IndorTrafficPlan для распознавания и передачи дорожных знаков с видео на план дороги (демо-ссылка):
-                    <ul>
-                        <li>Обучил YOLO для обнаружения дорожных знаков (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
-                        <li>Разработал классификаторы на основе EfficientNet V2 для групп знаков (точность ≥0.98).</li>
-                        <li>Создал гибридную модель с MobileNet V3 для табличных и визуальных данных, сократив время вывода в 3 раза без потери точности.</li>
-                        <li>Реализовал модель LSTM для улучшения отслеживания, устранив переключения ID.</li>
-                        <li>Сгенерировал синтетические данные для увеличения набора данных в 4 раза, улучшив обнаружение на 8% (Recall), точность на 12% (IoU) и классификацию на 10% (F1).</li>
-                        <li>Помог в разработке метода триангуляции для точного измерения расстояния до знаков (±0.15 м).</li>
-                        <li>Разработал скрипты для взаимодействия классификатора и детектора.</li>
-                        <li>Исправил аннотации данных с использованием CVAT и управлял наборами данных с помощью FiftyOne.</li>
-                    </ul>
-                </li>
-            </ul>
+            
+            <div class="job">
+                <h3>Data Scientist в IndorSoft</h3>
+                <span>Февраль 2022 – Сентябрь 2024</span>
+                <ul>
+                    <li>Разработал ансамбль CatBoost для перенаправления запросов поддержки в соответствующие разделы FAQ, снизив нагрузку на команду на 15%.</li>
+                    <li>Создал дополнение для IndorTrafficPlan для распознавания и передачи дорожных знаков с видео на план дороги (<a href="https://www.indorsoft.ru/about/news/65947/" target="_blank">демо-ссылка</a>):
+                        <ul>
+                            <li>Обучил YOLO для обнаружения дорожных знаков (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
+                            <li>Разработал классификаторы на основе EfficientNet V2 для групп знаков (точность ≥0.98).</li>
+                            <li>Создал гибридную модель с MobileNet V3 для табличных и визуальных данных, сократив время вывода в 3 раза без потери точности.</li>
+                            <li>Реализовал модель LSTM для улучшения отслеживания, устранив переключения ID.</li>
+                            <li>Сгенерировал синтетические данные для увеличения набора данных в 4 раза, улучшив обнаружение на 8% (Recall), точность на 12% (IoU) и классификацию на 10% (F1).</li>
+                            <li>Помог в разработке метода триангуляции для точного измерения расстояния до знаков (±0.15 м).</li>
+                            <li>Разработал скрипты для взаимодействия классификатора и детектора.</li>
+                            <li>Исправил аннотации данных с использованием CVAT и управлял наборами данных с помощью FiftyOne.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-            <h3>Data Scientist Intern в IndorSoft</h3>
-            <span>Январь 2022 – Февраль 2022</span>
-            <ul>
-                <li>Написал эффективные SQL-запросы для извлечения и анализа данных.</li>
-                <li>Рефакторил существующий код.</li>
-                <li>Поиск, анализ и подготовка наборов данных.</li>
-                <li>Презентовал результаты с использованием Gradio.</li>
-                <li>Разработал кластеризатор изображений с использованием ViT и K-means, достиг Silhouette Score = 0.91 после PCA.</li>
-                <li>Улучшил классификатор YOLO на 12% (F1) с новым разделением данных.</li>
-            </ul>
+            <div class="job">
+                <h3>Data Scientist Intern в IndorSoft</h3>
+                <span>Январь 2022 – Февраль 2022</span>
+                <ul>
+                    <li>Написал эффективные SQL-запросы для извлечения и анализа данных.</li>
+                    <li>Рефакторил существующий код.</li>
+                    <li>Поиск, анализ и подготовка наборов данных.</li>
+                    <li>Презентовал результаты с использованием Gradio.</li>
+                    <li>Разработал кластеризатор изображений с использованием ViT и K-means, достиг Silhouette Score = 0.91 после PCA. Улучшил классификатор YOLO на 12% (F1) с новым разделением данных.</li>
+                </ul>
+            </div>
         </section>
 
         <section id="experience-en" class="section content">
             <h2>Work Experience</h2>
-            <h3>Data Scientist at IndorSoft</h3>
-            <span>February 2022 – September 2024</span>
-            <ul>
-                <li>Developed a CatBoost ensemble to redirect support requests to appropriate FAQ sections, reducing team workload by 15%.</li>
-                <li>Created an add-on for IndorTrafficPlan to recognize and transfer road signs from video to road plan (demo link):
-                    <ul>
-                        <li>Trained YOLO for detecting road signs (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
-                        <li>Developed classifiers based on EfficientNet V2 for sign groups (accuracy ≥0.98).</li>
-                        <li>Created a hybrid model with MobileNet V3 for tabular and visual data, reducing inference time by 3x without accuracy loss.</li>
-                        <li>Implemented an LSTM model to improve tracking, eliminating ID Switches.</li>
-                        <li>Generated synthetic data to expand dataset by 4x, improving detection by 8% (Recall), precision by 12% (IoU), and classification by 10% (F1).</li>
-                        <li>Assisted in developing a triangulation method for accurate distance measurement to signs (±0.15 m).</li>
-                        <li>Developed scripts for classifier and detector interaction.</li>
-                        <li>Corrected data annotation using CVAT and managed datasets with FiftyOne.</li>
-                    </ul>
-                </li>
-            </ul>
+            
+            <div class="job">
+                <h3>Data Scientist at IndorSoft</h3>
+                <span>February 2022 – September 2024</span>
+                <ul>
+                    <li>Developed a CatBoost ensemble to redirect support requests to appropriate FAQ sections, reducing team workload by 15%.</li>
+                    <li>Created an add-on for IndorTrafficPlan to recognize and transfer road signs from video to road plan (<a href="https://www.indorsoft.ru/about/news/65947/" target="_blank">demo link</a>):
+                        <ul>
+                            <li>Trained YOLO for detecting road signs (F1 = 0.96, mAP@0.5–0.95 = 0.89).</li>
+                            <li>Developed classifiers based on EfficientNet V2 for sign groups (accuracy ≥0.98).</li>
+                            <li>Created a hybrid model with MobileNet V3 for tabular and visual data, reducing inference time by 3x without accuracy loss.</li>
+                            <li>Implemented an LSTM model to improve tracking, eliminating ID Switches.</li>
+                            <li>Generated synthetic data to expand dataset by 4x, improving detection by 8% (Recall), precision by 12% (IoU), and classification by 10% (F1).</li>
+                            <li>Assisted in developing a triangulation method for accurate distance measurement to signs (±0.15 m).</li>
+                            <li>Developed scripts for classifier and detector interaction.</li>
+                            <li>Corrected data annotation using CVAT and managed datasets with FiftyOne.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
-            <h3>Data Scientist Intern at IndorSoft</h3>
-            <span>January 2022 – February 2022</span>
-            <ul>
-                <li>Wrote efficient SQL queries for data extraction and analysis.</li>
-                <li>Refactored existing code.</li>
-                <li>Searched, analyzed, and prepared datasets.</li>
-                <li>Presented results using Gradio.</li>
-                <li>Developed an image clusterizer using ViT and K-means, achieving Silhouette Score = 0.91 after PCA.</li>
-                <li>Improved YOLO classifier by 12% (F1) with new data splitting.</li>
-            </ul>
+            <div class="job">
+                <h3>Data Scientist Intern at IndorSoft</h3>
+                <span>January 2022 – February 2022</span>
+                <ul>
+                    <li>Wrote efficient SQL queries for data extraction and analysis.</li>
+                    <li>Refactored existing code.</li>
+                    <li>Searched, analyzed, and prepared datasets.</li>
+                    <li>Presented results using Gradio.</li>
+                    <li>Developed an image clusterizer using ViT and K-means, achieving Silhouette Score = 0.91 after PCA. Improved YOLO classifier by 12% (F1) with new data splitting.</li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills-ru" class="section content active">
             <h2>Навыки</h2>
             <ul class="skills-list">
